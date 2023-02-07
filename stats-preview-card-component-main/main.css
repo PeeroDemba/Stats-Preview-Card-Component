@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100vh;
+  background-color: hsl(233deg, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  color: hsl(277deg, 64%, 61%);
+}
+
+main.container {
+  max-width: 60rem;
+  min-height: 20rem;
+  color: white;
+  display: grid;
+  margin: auto;
+  margin-top: 7rem;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: hsl(244deg, 38%, 16%);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+main.container > .text {
+  padding: 4.5rem;
+}
+main.container > .text > h1 {
+  margin-bottom: 2rem;
+}
+main.container > .text > p {
+  line-height: 1.4rem;
+  margin-bottom: 4rem;
+}
+main.container > .text .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main.container .image {
+  position: relative;
+}
+main.container .image img {
+  width: 100%;
+  min-height: 100%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+main.container .image::after {
+  content: "";
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 28.4rem;
+  background-color: rgb(81, 0, 128);
+  opacity: 0.7;
+}
+
+footer.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  color: rgb(189, 189, 180);
+}
+footer.attribution a {
+  color: white;
+}
+
+@media (max-width: 960px) {
+  main.container {
+    max-width: 20rem;
+    max-height: 50rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  main.container .text {
+    padding: 2.9rem;
+    order: 2;
+    text-align: center;
+  }
+  main.container .text > h1 {
+    margin-bottom: 2rem;
+  }
+  main.container .text > p {
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  main.container .text .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  main.container .text .flex .first {
+    margin-bottom: 2rem;
+  }
+  main.container .text .flex .second {
+    margin-bottom: 2rem;
+  }
+  main.container .image {
+    position: relative;
+    order: 1;
+  }
+  main.container .image img {
+    width: 100%;
+    min-height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+  }
+  main.container .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 16.8rem;
+  }
+}
