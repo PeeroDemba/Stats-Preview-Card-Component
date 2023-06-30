@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+main {
+  min-height: 98vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 70rem;
+  min-height: 15rem;
+  color: white;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: hsl(244, 38%, 16%);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.container > .text {
+  padding: 4.5rem 7rem 4.5rem 4.5rem;
+}
+.container > .text > h1 {
+  margin-bottom: 2rem;
+  line-height: 2.5rem;
+}
+.container > .text > p {
+  line-height: 1.5rem;
+  margin-bottom: 4rem;
+  color: #ccc;
+}
+.container > .text .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+}
+.container > .text .flex h2 {
+  margin-bottom: 0.5rem;
+}
+.container > .text .flex p {
+  color: #ccc;
+  font-size: 0.8rem;
+}
+.container .image {
+  position: relative;
+}
+.container .image img {
+  max-width: 100%;
+  min-height: 100%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.container .image::after {
+  content: "";
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(81, 0, 128);
+  filter: saturate(0.5);
+  opacity: 0.7;
+}
+
+footer.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  color: rgb(189, 189, 180);
+}
+footer.attribution a {
+  color: white;
+}
+
+@media (max-width: 960px) {
+  main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .container {
+    max-width: 23rem;
+    max-height: 56rem;
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .container .text {
+    padding: 2.9rem 0rem 2.9rem 2.9rem;
+    order: 2;
+    text-align: center;
+    max-width: 20rem;
+  }
+  .container .text > h1 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .container .text > p {
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .container .text .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5rem 2rem 2rem;
+  }
+  .container .text .flex .first {
+    margin-bottom: 2rem;
+  }
+  .container .text .flex .second {
+    margin-bottom: 2rem;
+  }
+  .container .image {
+    position: relative;
+    order: 1;
+  }
+  .container .image img {
+    width: 100%;
+    min-height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+  }
+  .container .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+  }
+}
+@media (max-width: 400px) {
+  main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .container {
+    max-width: 20rem;
+    max-height: 53rem;
+    grid-template-columns: 1fr;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .container .text {
+    padding: 2.9rem 1rem 2.9rem 1rem;
+    order: 2;
+    text-align: center;
+    max-width: 20rem;
+  }
+  .container .text > h1 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  .container .text > p {
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
+  }
+  .container .text .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3.7rem 2rem 2rem;
+  }
+  .container .text .flex .first {
+    margin-bottom: 2rem;
+  }
+  .container .text .flex .second {
+    margin-bottom: 2rem;
+  }
+  .container .image {
+    position: relative;
+    order: 1;
+  }
+  .container .image img {
+    width: 100%;
+    min-height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+  }
+  .container .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+  }
+}
